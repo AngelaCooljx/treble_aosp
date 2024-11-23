@@ -16,7 +16,7 @@ BV=$1
 
 initRepos() {
     echo "--> Initializing workspace"
-    repo init -u https://android.googlesource.com/platform/manifest -b android-14.0.0_r55 --git-lfs
+    repo init -u https://android.googlesource.com/platform/manifest -b android-14.0.0_r55 --git-lfs --depth=1
     echo
 
     echo "--> Preparing local manifest"
@@ -89,14 +89,14 @@ buildVndkliteVariant() {
 }
 
 buildVariants() {
-    buildVariant treble_a64_bvN
-    buildVariant treble_a64_bgN
+    # buildVariant treble_a64_bvN
+    # buildVariant treble_a64_bgN
     buildVariant treble_arm64_bvN
-    buildVariant treble_arm64_bgN
-    buildVndkliteVariant treble_a64_bvN
-    buildVndkliteVariant treble_a64_bgN
-    buildVndkliteVariant treble_arm64_bvN
-    buildVndkliteVariant treble_arm64_bgN
+    # buildVariant treble_arm64_bgN
+    # buildVndkliteVariant treble_a64_bvN
+    # buildVndkliteVariant treble_a64_bgN
+    # buildVndkliteVariant treble_arm64_bvN
+    # buildVndkliteVariant treble_arm64_bgN
 }
 
 generatePackages() {
